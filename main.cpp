@@ -21,7 +21,7 @@ void remove_directory_recursive(const fs::path& dir) {
 int main() {
     try {
         remove_directory_recursive("files");
-        const std::string fileName = "D:/Projects/C++/Lab2/input.txt";
+        const std::string fileName = "../input.txt";
         constexpr int numConsumers = 4;
         FileProcessor processor(fileName, numConsumers);
         processor.waitForCompletion();
