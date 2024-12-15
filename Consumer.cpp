@@ -4,6 +4,8 @@
 #include <filesystem>  // Для работы с файловой системой
 namespace fs = std::filesystem;
 
+std::mutex cout_mutex;
+
 Consumer::Consumer(int id, BlockingQueue<Record>& q) : id(id), queue(q) {}
 
 void Consumer::operator()() const {
@@ -39,5 +41,9 @@ void Consumer::operator()() const {
         file.second.close();
     }
 
-    std::cout << "Consumer " << id << " finished processing." << std::endl;
+    // Защита вывода с помощью мьютекса
+    {
+        std::lock_guard<std::mutex> lock(cout_mutex);
+        std::cout << "Consumer " << id << " finished processing." << std::endl;
+    }
 }
