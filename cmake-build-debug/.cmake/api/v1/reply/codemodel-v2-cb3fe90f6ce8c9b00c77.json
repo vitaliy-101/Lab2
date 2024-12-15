@@ -9,7 +9,7 @@
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.30"
+						"string" : "3.26"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
@@ -49,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/Vitaliy/CLionProjects/Work/cmake-build-debug",
-		"source" : "C:/Users/Vitaliy/CLionProjects/Work"
+		"build" : "D:/Projects/C++/Lab2/cmake-build-debug",
+		"source" : "D:/Projects/C++/Lab2"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 7
+		"minor" : 5
 	}
 }
